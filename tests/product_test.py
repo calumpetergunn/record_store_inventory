@@ -34,6 +34,10 @@ class TestProduct(unittest.TestCase):
         self.product.add_stock(30)
         self.assertEqual(55, self.product.quantity)
 
+    def can_reduce_stock(self):
+        self.product.reduce_stock(15)
+        self.assertEqual(10, self.product.quantity)
+
 
 
 
