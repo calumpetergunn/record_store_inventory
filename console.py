@@ -31,7 +31,7 @@ product_repository.save(product4)
 product5 = Product("Meat Prize", "Team Ugly", record_label2, "Cassette", "Slop-Rock", 10, 5.50, 9.99)
 product_repository.save(product5)
 
-product6 = Product("Metalmania", "Salad Boys", record_label2, "CD", "Jangle-Rock", 35, 8.50, 15.99)
+product6 = Product("Hubba Bubba", "Damaged Bug", record_label1, "LP", "Synth", 23, 9.50, 19.99)
 product_repository.save(product6)
 
 

@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
 
 {% block content %}
-look at this
+<h1>{{record_label.name}}</h1>
+<ul>
+    {% for product in products %}
+    <li>{{product.title}}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
