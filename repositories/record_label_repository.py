@@ -4,7 +4,7 @@ from models.record_label import RecordLabel
 from models.product import  Product
 
 def save(record_label):
-    sql = "INSERT INTO record_labels (name) VALUES (%s) RETURNING *"
+    sql = "INSERT INTO record_labels (name, location) VALUES (%s, %s) RETURNING *"
     values = [record_label.name]
     results = run_sql(sql, values)
     id = results[0]['id']
@@ -29,7 +29,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        record_label = RecordLabel(row['name'], row['location'], row['id'])
+        record_label = RecordLabel(result['name'], result['location'], result['id'])
     return record_label
 
 def delete_all():
@@ -42,8 +42,8 @@ def delete(id):
     run_sql(sql, values)
 
 def update(record_label):
-    sql = "UPDATE record_labels SET (name) = (%s) WHERE id = %s"
-    values = [record_label.name, record_label.id]
+    sql = "UPDATE record_labels SET (name, location) = (%s, %s) WHERE id = %s"
+    values = [record_label.name, record_label.location, record_label.id]
     run_sql(sql, values)
 
 def products(record_label):
