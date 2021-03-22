@@ -8,12 +8,11 @@ import repositories.record_label_repository as record_label_repository
 def save(product):
     sql = """
         INSERT INTO products (title, artist, record_label_id, format, genre, quantity, buy_cost, sell_price) 
-        VALUES (%s, %s, %s, %s, %s, %s, %s, %s,) RETURNING *
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s) RETURNING id
     """
     values = [product.title, product.artist, product.record_label.id, product.format, product.genre, product.quantity, product.buy_cost, product.sell_price]
     results = run_sql(sql, values)
-    id = results[0]['id']
-    product.id = id
+    product.id = results[0]['id']
     return product
 
 def select_all():

@@ -4,11 +4,10 @@ from models.record_label import RecordLabel
 from models.product import  Product
 
 def save(record_label):
-    sql = "INSERT INTO record_labels (name, location) VALUES (%s, %s) RETURNING *"
-    values = [record_label.name]
+    sql = "INSERT INTO record_labels (name, location) VALUES (%s, %s) RETURNING id"
+    values = [record_label.name, record_label.location]
     results = run_sql(sql, values)
-    id = results[0]['id']
-    record_label.id = id
+    record_label.id = results[0]['id']
     return record_label
 
 def select_all():

@@ -5,6 +5,8 @@ from models.record_label import RecordLabel
 
 record_labels_blueprint = Blueprint("record_labels", __name__)
 
-@books_blueprint.route("/record_labels")
+@record_labels_blueprint.route("/record_labels")
 def record_labels():
+    record_labels = record_label_repository.select_all()
+    return render_template("record_labels/index.html", record_labels = record_labels)
     
