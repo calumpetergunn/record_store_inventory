@@ -18,8 +18,10 @@ product1 = Product("Lifetime of Secretion", "Dance Asthmatics", record_label2, "
 product_repository.save(product1)
 
 product2 = Product("Castlemania", "Thee Oh Sees", record_label1, "LP", "Psychedelic", 25, 9.50, 21.99)
-product_repository.save(product1)
+product_repository.save(product2)
 
 product3 = Product("Metalmania", "Salad Boys", record_label2, "CD", "Jangle-Rock", 35, 8.50, 15.99)
-product_repository.save(product1)
+product_repository.save(product3)
 
+
+pdb.set_trace()

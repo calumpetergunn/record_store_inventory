@@ -1,5 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Record Labels!
+Record Labels
+    {% for record_label in record_labels %}
+        <p> {{record_label.name}}</p>
+        <p>{{record_label.location}}</p>
+      
+    {% endfor %}
 {% endblock %}

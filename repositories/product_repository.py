@@ -1,9 +1,9 @@
 from db.run_sql import run_sql
-
+import repositories.record_label_repository as record_label_repository
 from models.product import Product
 from models.record_label import RecordLabel
 
-import repositories.record_label_repository as record_label_repository
+
 
 def save(product):
     sql = """
@@ -22,7 +22,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        record_label = record_label_repository.select(row[record_label.id])
+        record_label = record_label_repository.select(row['record_label_id'])
         product = Product(row['title'], row['artist'], record_label, row['format'], row['genre'], row['quantity'], row['buy_cost'], row['sell_price'])
         products.append(product)
     return products

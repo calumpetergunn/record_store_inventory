@@ -9,4 +9,13 @@ record_labels_blueprint = Blueprint("record_labels", __name__)
 def record_labels():
     record_labels = record_label_repository.select_all()
     return render_template("record_labels/index.html", record_labels = record_labels)
+
+@record_labels_blueprint.route("/record_labels/<id>")
+def show(id):
+    record_label = record_label_repository.select(id)
+    products = record_label_repository.products(record_label)
+    return render_template("record_labels/show.html", record_label=record_label, products=products)
+
+
+
     
