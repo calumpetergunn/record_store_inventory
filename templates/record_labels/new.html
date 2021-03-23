@@ -3,12 +3,18 @@
 {% block content %}
 <h1>Add New Record Label</h1>
     <form action="/record_labels" method="POST">
-        <label for="title">Label Name:</label>
-        <input type="text" id="name" name="name" placeholder="Name" required>
-
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location" placeholder="Location" required>
-
-        <input type="submit" value="Add Record Label">
+        <ul class="flex-container">
+            <li>
+                <label for="title">Label Name:</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+            </li>
+            <li>
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="Location" required>
+            </li>
+            <li>
+                <input class="buttons" type="submit" value="Add Record Label">
+            </li>
+        </ul>   
     </form>
 {% endblock %}

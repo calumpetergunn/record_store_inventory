@@ -21,7 +21,7 @@
     <tr>
         <td><a href="/products/{{product.id}}" class="links">{{product.title}}</a></td>
         <td>{{product.artist}}</td>
-        <td>{{product.record_label.name}}</td>
+        <td><a href="/record_labels/{{product.record_label.id}}" class="links">{{product.record_label.name}}</a></td>
         <td>{{product.format}}</td>
         <td>{{product.genre}}</td>
         {% if product.quantity == 0 %}
@@ -42,9 +42,9 @@
     {% endfor %}
 </table>
 
-<div class="buttons">
+<div>
     <form action="/products/new">
-    <button>Add New Product</button>
+    <button class="buttons">Add New Product</button>
     </form>
 </div>
 

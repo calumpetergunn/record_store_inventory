@@ -4,39 +4,51 @@
 <h1>Add New Product</h1>
 
 <form action="/products" method="POST">
-    <label for="title">Title:</label>
-    <input type="text" id="title" name="title" placeholder="Title" required>
-
-    <label for="artist">Artist:</label>
-    <input type="text" id="artist" name="artist" placeholder="Artist" required>
-
-    <label for="record_label_id">Record Label:</label>
-    <select name="record_label_id" id="record_label_id">
-        {% for record_label in record_labels %}
-        <option value="{{record_label.id}}">{{record_label.name}}</option>
-        {% endfor %}
-    </select>
-
-    <label for="Format">Format:</label>
-    <select name="format" id="format">
-        <option value="LP">LP</option>
-        <option value="CD">CD</option>
-        <option value="Cassette">Cassette</option>
-    </select>
-
-    <label for="genre">Genre:</label>
-    <input type="text" id="genre" name="genre" placeholder="Genre" required>
-
-    <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" name="quantity" placeholder="0" min="1">
-
-    <label for="buy_cost">Buy Cost:</label>
-    <input type="number" id="buy_cost" name="buy_cost" step="0.01" placeholder="$0.00" min="0">
-
-    <label for="sell_price">Sell Price:</label>
-    <input type="number" id="sell_price" name="sell_price" step="0.01" placeholder="$0.00" min="0">
-    
-    <input type="submit" value="Add Product">
+    <ul class="flex-container">
+        <li class="form-group">
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" placeholder="Title" required>
+        </li>
+        <li class="form-group">
+            <label for="artist">Artist:</label>
+            <input type="text" id="artist" name="artist" placeholder="Artist" required>
+        </li>
+        <li class="form-group">
+            <label for="record_label_id">Record Label:</label>
+            <select name="record_label_id" id="record_label_id">
+                {% for record_label in record_labels %}
+                    <option value="{{record_label.id}}">{{record_label.name}}</option>
+                {% endfor %}
+            </select>
+        </li>
+        <li class="form-group">
+            <label for="Format">Format:</label>
+            <select name="format" id="format">
+                <option value="LP">LP</option>
+                <option value="CD">CD</option>
+                <option value="Cassette">Cassette</option>
+            </select>
+        </li>
+        <li class="form-group">
+            <label for="genre">Genre:</label>
+            <input type="text" id="genre" name="genre" placeholder="Genre" required>
+        </li>    
+        <li class="form-group">         
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" placeholder="0" min="1">
+        </li>  
+        <li class="form-group">
+            <label for="buy_cost">Buy Cost:</label>
+            <input type="number" id="buy_cost" name="buy_cost" step="0.01" placeholder="$0.00" min="0">
+        </li>
+        <li class="form-group">
+            <label for="sell_price">Sell Price:</label>
+            <input type="number" id="sell_price" name="sell_price" step="0.01" placeholder="$0.00" min="0">
+        </li>
+        <li class="form-group">
+            <input class="buttons" type="submit" value="Add Product">
+        </li>
+    </ul>
 </form>
 
 {% endblock %}
