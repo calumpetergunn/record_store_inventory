@@ -37,4 +37,28 @@ def create_product():
     product_repository.save(product)
     return redirect("/products")
 
+@products_blueprint.route("/products/<id>/delete", methods=["POST"])
+def delete_product(id):
+    product_repository.delete(id)
+    return redirect("/products")
 
+
+@products_blueprint.route("/products/<id>/edit", methods=["GET"])
+def edit_product(id):
+    product = product_repository.select(id)
+    record_labels = record_label_repository.select_all()
+    return render_template("/products/edit.html", title = "Edit Product", product=product, record_labels=record_labels)
+
+@products_blueprint.route("/products/<id>", methods=["POST"])
+def update_product(id):
+    title = request.form['title']
+    artist = request.form['artist']
+    record_label = record_label_repository.select(request.form['record_label_id'])
+    format = request.form['format']
+    genre = request.form['genre']
+    quantity = request.form['quantity']
+    buy_cost = request.form['buy_cost']
+    sell_price = request.form['sell_price']
+    product = Product(title, artist, record_label, format, genre, quantity, buy_cost, sell_price, id)
+    product_repository.update(product)
+    return redirect("/products")

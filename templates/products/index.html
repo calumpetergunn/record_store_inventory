@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Products
+<h1>Full Product List</h1>
 
 <table>
     <tr>
@@ -16,8 +16,9 @@ Products
         <!-- <th>Margin</th> -->
     </tr>
     {% for product in products %}
+    
     <tr>
-        <td>{{product.title}}</td>
+        <td><a href="/products/{{product.id}}">{{product.title}}</a></td>
         <td>{{product.artist}}</td>
         <td>{{product.record_label.name}}</td>
         <td>{{product.format}}</td>
@@ -26,7 +27,7 @@ Products
         <td>{{product.buy_cost}}</td>
         <td>{{product.sell_price}}</td>
         <!-- <td>{{margin}}</td> -->
-    </tr>   
+    </tr>  
     {% endfor %}
 </table>
 

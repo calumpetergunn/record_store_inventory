@@ -1,0 +1,16 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Edit Record Label</h1>
+
+<form action="/record_labels/{{record_label.id}}" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" value="{{record_label.name}}" placeholder="Name" required>
+
+    <label for="location">Artist:</label>
+    <input type="text" id="location" name="location" value="{{record_label.location}}" placeholder="Location" required>
+    
+    <input type="submit" value="Edit Record Label">
+</form>
+{% endblock %}
