@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Full Product List</h1>
 
-<table>
+<table class="table">
     <tr>
         <th>Title</th>
         <th>Artist</th>
@@ -15,7 +15,6 @@
         <th>Sell Price</th>
         <th>Margin</th>
         <th></th>
-        <th></th>
     </tr>
     {% for product in products %}
     
@@ -25,15 +24,16 @@
         <td>{{product.record_label.name}}</td>
         <td>{{product.format}}</td>
         <td>{{product.genre}}</td>
-        {% if product.quantity > 10 %}
-        <td class="stockfine">{{product.quantity}}</td>
-        {% else %}
+        {% if product.quantity == 0 %}
+        <td class="soldout">{{product.quantity}}</td>
+        {% elif product.quantity < 11 %}
         <td class="stocklow">{{product.quantity}}</td>
+        {% else %}
+        <td class="stockfine">{{product.quantity}}</td>
         {% endif %}
-        <!-- <td>{{product.quantity}}</td> -->
         <td>{{product.buy_cost}}</td>
         <td>{{product.sell_price}}</td>
-        <td>Margin</td>
+        <td>margin</td>
         <td>
            <a href="/products/{{product.id}}/edit" class="links">Edit Me</a>
         </td>

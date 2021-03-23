@@ -2,7 +2,15 @@ body {
     font-family: 'Cutive Mono', monospace;
 }
 
-.menu > li > a{
+.table {
+    border: black, 2px;
+}
+
+.menu > li {
+    list-style-type: none;
+}
+
+.menu > li > a {
     text-decoration: none;
 }
 
@@ -19,9 +27,14 @@ h1 {
 }
 
 .stockfine {
-    background-color: chartreuse;
+    background-image: linear-gradient(to right, yellow , green);
 }
 
 .stocklow {
-    background-color: coral;
+    background-image: linear-gradient(to right, white , red);
 }
+
+.soldout {
+    background-image: linear-gradient(to right, red , yellow);
+}
+
