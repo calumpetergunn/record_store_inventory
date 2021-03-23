@@ -34,7 +34,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        record_label = record_label_repository(result[record_label.id])
+        record_label = record_label_repository.select(result['record_label_id'])
         product = Product(result['title'], result['artist'], record_label, result['format'], result['genre'], result['quantity'], result['buy_cost'], result['sell_price'])
     return product
 

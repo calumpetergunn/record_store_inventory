@@ -9,3 +9,32 @@ products_blueprint = Blueprint("products", __name__)
 def products():
     products = product_repository.select_all()
     return render_template("products/index.html", products = products)
+
+@products_blueprint.route("/products/<id>")
+def show(id):
+    product = product_repository.select(id)
+    return render_template("products/show.html", product=product)
+
+
+@products_blueprint.route("/products/new", methods=['GET'])
+def new_product():
+    products = product_repository.select_all()
+    record_labels = record_label_repository.select_all()
+    return render_template("products/new.html", products=products, record_labels=record_labels)
+
+@products_blueprint.route("/products", methods=['POST'])
+def create_product():
+    record_label_id = request.form['record_label_id']
+    title = request.form['title']
+    artist = request.form['artist']
+    record_label = record_label_repository.select(record_label_id)
+    format = request.form['format']
+    genre = request.form['genre']
+    quantity = request.form['quantity']
+    buy_cost = request.form['buy_cost']
+    sell_price = request.form['sell_price']
+    product = Product(title, artist, record_label, format, genre, quantity, buy_cost, sell_price)
+    product_repository.save(product)
+    return redirect("/products")
+
+

@@ -13,6 +13,7 @@ Products
         <th>Quantity</th>
         <th>Buy Cost</th>
         <th>Sell Price</th>
+        <!-- <th>Margin</th> -->
     </tr>
     {% for product in products %}
     <tr>
@@ -24,6 +25,7 @@ Products
         <td>{{product.quantity}}</td>
         <td>{{product.buy_cost}}</td>
         <td>{{product.sell_price}}</td>
+        <!-- <td>{{margin}}</td> -->
     </tr>   
     {% endfor %}
 </table>

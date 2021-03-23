@@ -15,3 +15,7 @@ class Product:
 
     def reduce_stock(self, amount):
         self.quantity -= amount
+
+    def calculate_margin(self, buy_cost, sell_price):
+        margin = sell_price - buy_cost
+        return margin
