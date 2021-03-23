@@ -13,7 +13,9 @@
         <th>Quantity</th>
         <th>Buy Cost</th>
         <th>Sell Price</th>
-        <!-- <th>Margin</th> -->
+        <th>Margin</th>
+        <th></th>
+        <th></th>
     </tr>
     {% for product in products %}
     
@@ -26,7 +28,11 @@
         <td>{{product.quantity}}</td>
         <td>{{product.buy_cost}}</td>
         <td>{{product.sell_price}}</td>
-        <!-- <td>{{margin}}</td> -->
+        <td>Margin</td>
+        <td>
+           <a href="/products/{{product.id}}/edit">Edit Me</a>
+        </td>
+       
     </tr>  
     {% endfor %}
 </table>

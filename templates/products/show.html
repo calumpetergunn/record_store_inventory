@@ -23,7 +23,14 @@
         <td>{{product.quantity}}</td>
         <td>{{product.buy_cost}}</td>
         <td>{{product.sell_price}}</td> -->
-        <!-- <td>{{margin}}</td>
+       
     </tr>   
 </table>
+<a href="/products/{{product.id}}/edit">Edit</a>
+<div>
+    <form action="/products/{{product.id}}/delete" method="POST">
+    <button>Delete</button>
+    </form>
+</div>
+ </td>
 {% endblock %}
