@@ -20,21 +20,32 @@
     {% for product in products %}
     
     <tr>
-        <td><a href="/products/{{product.id}}">{{product.title}}</a></td>
+        <td><a href="/products/{{product.id}}" class="links">{{product.title}}</a></td>
         <td>{{product.artist}}</td>
         <td>{{product.record_label.name}}</td>
         <td>{{product.format}}</td>
         <td>{{product.genre}}</td>
-        <td>{{product.quantity}}</td>
+        {% if product.quantity > 10 %}
+        <td class="stockfine">{{product.quantity}}</td>
+        {% else %}
+        <td class="stocklow">{{product.quantity}}</td>
+        {% endif %}
+        <!-- <td>{{product.quantity}}</td> -->
         <td>{{product.buy_cost}}</td>
         <td>{{product.sell_price}}</td>
         <td>Margin</td>
         <td>
-           <a href="/products/{{product.id}}/edit">Edit Me</a>
+           <a href="/products/{{product.id}}/edit" class="links">Edit Me</a>
         </td>
        
     </tr>  
     {% endfor %}
 </table>
+
+<div class="buttons">
+    <form action="/products/new">
+    <button>Add New Product</button>
+    </form>
+</div>
 
 {% endblock %}

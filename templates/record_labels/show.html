@@ -28,5 +28,12 @@
     </tr>   
     {% endfor %}
 </table>
-
+<div class="buttons">
+    <form action="/record_labels/{{record_label.id}}/edit">
+    <button>Edit</button>
+    </form>
+    <form action="/record_labels/{{record_label.id}}/delete" method="POST">
+    <button>Delete</button>
+    </form>
+</div>
 {% endblock %}

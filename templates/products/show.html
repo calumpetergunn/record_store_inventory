@@ -26,11 +26,14 @@
        
     </tr>   
 </table>
-<a href="/products/{{product.id}}/edit">Edit</a>
-<div>
+
+<div class="buttons">
+    <form action="/products/{{product.id}}/edit">
+    <button>Edit</button>
+    </form>
     <form action="/products/{{product.id}}/delete" method="POST">
     <button>Delete</button>
     </form>
 </div>
- </td>
+
 {% endblock %}

@@ -9,3 +9,19 @@ body {
 h1 {
     text-align: center;
 }
+
+.links {
+    text-decoration: none;
+}
+
+.buttons {
+    margin: 30px;
+}
+
+.stockfine {
+    background-color: chartreuse;
+}
+
+.stocklow {
+    background-color: coral;
+}

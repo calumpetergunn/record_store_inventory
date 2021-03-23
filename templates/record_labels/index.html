@@ -1,10 +1,29 @@
 {% extends 'base.html' %}
 
 {% block content %}
-Record Labels
+<h1>Record Label Directory</h1>
+<table>
+    <tr>
+        <th>Label Name</th>
+        <th>Location</th>
+        <th></th>
+    </tr>
+
     {% for record_label in record_labels %}
-        <p> {{record_label.name}}</p>
-        <p>{{record_label.location}}</p>
+    <tr>
+        <td><a href="/record_labels/{{record_label.id}}" class="links">{{record_label.name}}</a></td>
+        <td>{{record_label.location}}</td>
+        <td>
+            <a href="/record_labels/{{record_label.id}}/edit" class="links">Edit Me</a>
+         </td>
+        
+     </tr>  
       
     {% endfor %}
+    
+    <div class="buttons">
+        <form action="/record_labels/new">
+        <button>Add New Record Label</button>
+        </form>
+    </div>
 {% endblock %}
