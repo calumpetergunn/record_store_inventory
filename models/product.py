@@ -10,12 +10,6 @@ class Product:
         self.sell_price = sell_price
         self.id = id
 
-    def add_stock(self, amount):
-        self.quantity += amount
-
-    def reduce_stock(self, amount):
-        self.quantity -= amount
-
     def calculate_margin(self):
         margin = self.sell_price - self.buy_cost
         return round(margin, 2)

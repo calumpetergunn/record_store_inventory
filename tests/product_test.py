@@ -30,13 +30,11 @@ class TestProduct(unittest.TestCase):
     def test_product_has_sell_price(self):
         self.assertEqual(15.99, self.product.sell_price)
 
-    def can_add_stock(self):
-        self.product.add_stock(30)
-        self.assertEqual(55, self.product.quantity)
+    def test_calculate_margin(self):
+        self.assertEqual(6.49, self.product.calculate_margin())
 
-    def can_reduce_stock(self):
-        self.product.reduce_stock(15)
-        self.assertEqual(10, self.product.quantity)
+    def test_calculate_total_margin(self):
+        self.assertEqual(162.25, self.product.calculate_total_margin())
 
 
 
