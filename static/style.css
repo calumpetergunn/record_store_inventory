@@ -100,25 +100,6 @@ form > input {
     border: none;
 }
 
-/* .form-group {
-    list-style: none;
-    display: flex;
-    flex-flow: column wrap; 
-}
-
-.form-group label {
-    flex: auto
-    display: block;
-    width: 175px;
-}
-
-.form-group input,
-.form-group select {
-    flex: auto;
-    display: block;
-    width: 275px;
-} */
-
 .flex-container {
     list-style-type: none;
     padding: 0;

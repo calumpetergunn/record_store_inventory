@@ -5,12 +5,16 @@
 <h1>Edit Record Label</h1>
 
 <form action="/record_labels/{{record_label.id}}" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" value="{{record_label.name}}" placeholder="Name" required>
-
-    <label for="location">Artist:</label>
-    <input type="text" id="location" name="location" value="{{record_label.location}}" placeholder="Location" required>
-    
-    <input class="buttons" type="submit" value="Edit Record Label">
+    <ul class="flex-container">
+        <li class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{record_label.name}}" placeholder="Name" required>
+        </li>  
+        <li class="form-group">
+            <label for="location">Artist:</label>
+            <input type="text" id="location" name="location" value="{{record_label.location}}" placeholder="Location" required>
+        </li> 
+        <input class="buttons" type="submit" value="Edit Record Label">
+    </ul>   
 </form>
 {% endblock %}

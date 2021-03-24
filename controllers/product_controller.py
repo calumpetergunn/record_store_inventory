@@ -13,8 +13,7 @@ def products():
 @products_blueprint.route("/products/<id>")
 def show(id):
     product = product_repository.select(id)
-    margin = product.calculate_margin(product.buy_cost, product.sell_price)
-    return render_template("products/show.html", product=product, margin=round(margin, 2))
+    return render_template("products/show.html", product=product)
 
 
 @products_blueprint.route("/products/new", methods=['GET'])

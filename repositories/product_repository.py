@@ -11,6 +11,8 @@ def save(product):
         VALUES (%s, %s, %s, %s, %s, %s, %s, %s) RETURNING id
     """
     values = [product.title, product.artist, product.record_label.id, product.format, product.genre, product.quantity, product.buy_cost, product.sell_price]
+    # import pdb
+    # pdb.set_trace()
     results = run_sql(sql, values)
     product.id = results[0]['id']
     return product
