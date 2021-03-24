@@ -2,10 +2,11 @@
 
 {% block content %}
 <h1>--Edit Product--</h1>
-
+<div class="flex-container">
 <form action="/products/{{product.id}}" method="POST">
-    <div class="flex-container">
+    
     <ul>
+
         <li class="form-group">
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" value="{{product.title}}" placeholder="Title" required>
@@ -57,15 +58,18 @@
                 <option value="0.9">10%</option>
                 <option value="0.8">20%</option>
         </li>
-        
-            
-        
+        </div>
+        <div class="button-flex">
+        <li>
+            <input class="buttons" type="submit" value="Update">
+        </li>   
     </ul>
-    <input class="buttons" type="submit" value="Update">
 </form>
 <form action="/products/{{product.id}}/delete" method="POST">
     <button class="buttons">Delete</button>
-    </form>
+</form>
 </div>
+</div>
+
 
 {% endblock %}

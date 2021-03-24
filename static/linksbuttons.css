@@ -30,6 +30,6 @@
 
 .button-flex {
     position: relative;
-    display: block;
+    display: flex;
     margin-left: 40px;
 }
