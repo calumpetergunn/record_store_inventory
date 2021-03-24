@@ -58,7 +58,7 @@ def update_product(id):
     genre = request.form['genre']
     quantity = request.form['quantity']
     buy_cost = request.form['buy_cost']
-    sell_price = request.form['sell_price']
+    sell_price = round(float(request.form['sell_price']) * float(request.form['on_sale']),2)
     product = Product(title, artist, record_label, format, genre, quantity, buy_cost, sell_price, id)
     product_repository.update(product)
     return redirect("/products")
