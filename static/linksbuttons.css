@@ -29,10 +29,7 @@
 }
 
 .button-flex {
-    display: flex;
-    flex-direction: row;
-}
-
-.button-flex > button {
-    justify-content: stretch;
+    position: relative;
+    display: block;
+    margin-left: 40px;
 }
