@@ -52,7 +52,7 @@
         <li class="form-group">
             <label for="on_sale">On Sale:</label>
             <select name="on_sale" id="on_sale">
-                <option value="0">0%</option>
+                <option value="1">0%</option>
                 <option value="0.95">5%</option>
                 <option value="0.9">10%</option>
                 <option value="0.8">20%</option>
@@ -63,11 +63,9 @@
     </ul>
     <input class="buttons" type="submit" value="Update">
 </form>
-</div>
-    
-<div>
-    <form action="/products/{{product.id}}/delete" method="POST">
+<form action="/products/{{product.id}}/delete" method="POST">
     <button class="buttons">Delete</button>
     </form>
 </div>
+
 {% endblock %}

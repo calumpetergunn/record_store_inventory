@@ -1,0 +1,33 @@
+.stockfine {
+    background-image: linear-gradient(to right, white , green);
+}
+
+.stocklow {
+    background-image: linear-gradient(to right, white , yellow);
+}
+
+.soldout {
+    background-image: linear-gradient(to right, white , red);
+}
+
+table {
+    padding: 15px;
+    margin: 15px;
+    text-align: left;
+    box-shadow: 0 9px #999;
+    text-decoration: none;
+  }
+
+td:hover {
+    background-color: black;
+    color: wheat;
+}
+
+th {
+    background-color: black;
+    color: white;
+  }
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

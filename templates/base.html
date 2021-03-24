@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='menus.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='linksbuttons.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='tables.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='form.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     <title>Record Store Inventory</title>
@@ -13,11 +17,11 @@
 <body>
     <header>
         <nav>
-            <ul class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/record_labels">Label Directory</a></li>
-            </ul>
+                <ul class="menu">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/record_labels">Label Directory</a></li>
+                </ul>
         </nav>
     </header>
     {% block content %}

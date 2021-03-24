@@ -3,45 +3,10 @@ body {
     background-color: wheat;
 }
 
-.menu {
-    
-    background-color: #4CAF50;
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
 
-}
-
-.menu > li {
-    list-style-type: none;
-    padding: 5px;
-}
-
-.menu > li > a {
-    text-decoration: none;
-    color: #fff;  
-}
-
-.menu > li > a:hover {
-    background-color: #3e8e41;
-}
 
 h1 {
     text-align: center;
-}
-
-.links {
-    text-decoration: none;
-    color: teal ;
-}
-
-.buttons {
-    padding: 15px 15px;
-    margin: 5px;
-    font-size: 24px;
-    text-align: center;
-    cursor: pointer;
-    outline: none;
     color: #fff;
     background-color: #4CAF50;
     border: none;
@@ -49,78 +14,6 @@ h1 {
     box-shadow: 0 9px #999;
 }
 
-.buttons:hover {
-    background-color: #3e8e41;
-}
-
-.buttons:active {
-    background-color: #3e8e41;
-    box-shadow: 0 5px #666;
-    transform: translateY(4px);
-}
-
-.stockfine {
-    background-image: linear-gradient(to right, yellow , green);
-}
-
-.stocklow {
-    background-image: linear-gradient(to right, white , red);
-}
-
-.soldout {
-    background-image: linear-gradient(to right, red , yellow);
-}
-
-table {
-    padding: 15px;
-    margin: 15px;
-    text-align: left;
-    box-shadow: 0 9px #999;
-    text-decoration: none;
-  }
-
-td:hover {
-    background-color: black;
-    color: wheat;
-}
-
-th {
-    background-color: black;
-    color: white;
-  }
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-form > input {
-    height: 25px;
-    border-radius: 5px;
-    margin-top: 15px;
-    border: none;
-}
-
-.flex-container {
-    list-style-type: none;
-    padding: 0;
-    border-radius: 3px;
-    width: 50%;
-}
-
-.form-group {
-    display: flex;
-    justify-content: flex-end;
-    padding: .5em;
-}
-
-.form-group > label {
-    padding: .5em 1em .5em 0;
-    flex: 1;
-}
-
-.form-group > input {
-    flex: 2;
-}
 
 
 

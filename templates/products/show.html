@@ -15,7 +15,7 @@
         <th>Margin</th>
     </tr>
     <tr>
-        <td>{{product.title}}</td>
+        <td><a href="/products/{{product.id}}" class="links"></a>{{product.title}}</td>
         <td>{{product.artist}}</td>
         <td>{{product.record_label.name}}</td>
         <td>{{product.format}}</td>
@@ -28,7 +28,7 @@
     </tr>   
 </table>
 
-<div>
+<div class="button-flex">
     <form action="/products/{{product.id}}/edit">
     <button class="buttons">Edit</button>
     </form>
