@@ -32,3 +32,7 @@
     display: flex;
     flex-direction: row;
 }
+
+.button-flex > button {
+    justify-content: stretch;
+}

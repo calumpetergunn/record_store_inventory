@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{{product.title}}</h1>
+<h1>--{{product.title}}--</h1>
 <table>
     <tr>
         <th>Title</th>
@@ -15,9 +15,9 @@
         <th>Margin</th>
     </tr>
     <tr>
-        <td><a href="/products/{{product.id}}" class="links"></a>{{product.title}}</td>
+        <td>{{product.title}}</td>
         <td>{{product.artist}}</td>
-        <td>{{product.record_label.name}}</td>
+        <td><a href="/record_labels/{{product.record_label.id}}" class="links">{{product.record_label.name}}</a></td>
         <td>{{product.format}}</td>
         <td>{{product.genre}}</td>
         <td>{{product.quantity}}</td>

@@ -1,0 +1,33 @@
+.image-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.image-container > img {
+    margin: 20px;
+}
+
+.bottom-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 15px;
+    padding: 25px;
+  
+}
+
+.bottom-container > div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bottom-container > div > img {
+    margin: 20px;
+}
+
+.button-flex {
+    
+}
